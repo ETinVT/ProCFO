@@ -11,7 +11,7 @@ SCSS library for compiling the global compiled CPA Site Solutions css library
 ## Open the cli and navigate to the project
 
 * From the Github desktop App 
-  * ` ctrl + \` `
+  * ` ctrl + ` `
 * Keyboard shortcuts 
   * ` Windows Start Key + r `
   * In the run terminal launch ` cmd `
