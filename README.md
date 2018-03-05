@@ -8,24 +8,24 @@ SCSS library for compiling the global compiled CPA Site Solutions css library
 
 ## Clone this repository
 
-## Open the Command Terminal and navigate to the project
+## Open the cli and navigate to the project
 
 * From the Github desktop App 
-  * `ctrl + \``
+  * ` ctrl + \` `
 * Keyboard shortcuts 
-  * `Windows Start Key + r`
-  * `cmd`
-  * `cd /directory/path`
+  * ` Windows Start Key + r `
+  * In the run terminal launch ` cmd `
+  * In the cli navigate to the _cp-template_ project ` cd /directory/path `
 
 ## Install dependancies
 
-type `npm i` in the command terminal
+type ` npm i ` in the cli
 
 ## Compile
 
-Two commands have been added for comiling the style sheet
+Two commands have been added for compiling the style sheet in the cli
 
 * Compile css
-  * `npm run build-css`
+  * ` npm run build-css `
 * Watch for changes and compile css
-  * `npm run watch-css`
+  * ` npm run watch-css `
