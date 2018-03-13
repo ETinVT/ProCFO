@@ -6,12 +6,19 @@
     "Collin Delphia <https://github.com/Kikoku>",
     "Teelah Hall <https://github.com/tjc02110>"
   ],
-  "dependencies": {
-    "node-sass-chokidar": "0.0.3"
+  "devDependencies": {
+    "css-loader": "^0.28.10",
+    "extract-loader": "^1.0.2",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.1.1",
+    "sass-loader": "^6.0.7",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11"
   },
+  "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
+    "build": "webpack"
   }
 }
