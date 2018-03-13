@@ -59,5 +59,15 @@ typings/
 
 package-lock.json
 
-# build products
-src/**/*.css
+#build products
+#Javascript
+dist/*.js
+build/*.js
+dist/**/*.js
+build/**/*.js
+
+#Cascading Style Sheet
+dist/*.css
+build/*.css
+dist/**/*.css
+build/**/*.css
