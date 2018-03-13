@@ -1,7 +1,10 @@
 const path = require('path');
 
 module.exports = {
-  entry: ['./src/scss/compiled.scss'],
+  entry: [
+    './src/js/index.js',
+    './src/scss/compiled.scss'
+  ],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build')
