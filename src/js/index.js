@@ -1,14 +1,5 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom'
+const test = [1,2,3];
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        App
-      </div>
-    )
-  }
-}
+const test2 = [...test, 4,5,6];
 
-ReactDOM.render(<App />, document.getElementById('root'))
+console.log('test2', test2)
