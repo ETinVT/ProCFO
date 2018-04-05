@@ -1,0 +1,69 @@
+
+// Flex Mixins
+@mixin display-flex() {
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($value) {
+  -webkit-box-flex: $value;
+  -moz-box-flex: $values;
+  -webkit-flex: $value;
+  -ms-flex: $value;
+  flex: $value;
+}
+
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+}
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  -ms-align-items: $align;
+  align-items: $align;
+}
+
+// Animation Mixins
+@mixin animation-duration($value) {
+  -moz-animation-duration: $value;
+  -o-animation-duration: $value;
+  -webkit-animation-duration: $value;
+  animation-duration: $value;
+}
+@mixin animation-delay($value) {
+  -moz-animation-delay: $value;
+  -o-animation-delay: $value;
+  -webkit-animation-delay: $value;
+  animation-delay: $value;
+}
+@mixin animation-iteration-count($value) {
+  -moz-animation-iteration-count: $value;
+  -o-animation-iteration-count: $value;
+  -webkit-animation-iteration-count: $value;
+  animation-iteration-count: $value;
+}
+@mixin animation-fill-mode($value) {
+  -moz-animation-fill-mode: $value;
+  -o-animation-fill-mode: $value;
+  -webkit-animation-fill-mode: $value;
+  animation-fill-mode: $value;
+}
+@mixin animation-name($value) {
+  -moz-animation-name: $value;
+  -o-animation-name: $value;
+  -webkit-animation-name: $value;
+  animation-name: $value;
+}
+
+// User Select Mixin
+@mixin user-select($value) {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
