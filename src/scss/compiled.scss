@@ -1,5 +1,3 @@
 @import 'variables/colorPalette.scss';
-
-* {
-  color: $cp-dark-blue;
-}
+@import 'variables/measurements.scss';
+@import 'variables/mixins.scss';
