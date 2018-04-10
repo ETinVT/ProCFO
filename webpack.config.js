@@ -12,33 +12,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].css',
-              publicPath: 'build/'
-            }
-          },
-          {
-            loader: 'extract-loader',
-            options: {
-              publicPath: null
-            }
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'postcss-loader'
-          },
-          {
-            loader: 'sass-loader'
-          }
-        ]
-      },
-      {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader"
