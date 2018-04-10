@@ -1,7 +1,9 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: [
+    'babel-polyfill',
     './src/js/index.js',
     './src/scss/compiled.scss'
   ],
@@ -18,5 +20,10 @@ module.exports = {
       },
     ]
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      fetch: 'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch'
+    })
+  ],
   watch: true
 };
