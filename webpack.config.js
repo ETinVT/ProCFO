@@ -28,6 +28,9 @@ module.exports = {
     }),
     new CleanWebpackPlugin(['build']),
     new HtmlWebpackPlugin({
+      filename: 'index.php',
+      template: './src/index.php',
+      inject: true
     })
   ],
   watch: false
