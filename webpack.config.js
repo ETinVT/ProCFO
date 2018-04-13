@@ -33,5 +33,7 @@ module.exports = {
       inject: true
     })
   ],
+  optimization: {
+  },
   watch: false
 };
