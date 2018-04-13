@@ -34,6 +34,7 @@ module.exports = {
     })
   ],
   optimization: {
+    runtimeChunk: false,
   },
   watch: false
 };
