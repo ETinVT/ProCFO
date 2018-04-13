@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -23,7 +24,8 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       fetch: 'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch'
-    })
+    }),
+    new CleanWebpackPlugin(['build'])
   ],
   watch: true
 };
