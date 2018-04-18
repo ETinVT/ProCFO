@@ -26,7 +26,9 @@ module.exports = {
     new webpack.ProvidePlugin({
       fetch: 'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch'
     }),
-    new CleanWebpackPlugin(['build']),
+    new CleanWebpackPlugin(['build'], {
+      watch: true
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.php',
       template: './src/index.php',
@@ -45,5 +47,5 @@ module.exports = {
       }
     }
   },
-  watch: false
+  watch: true
 };
