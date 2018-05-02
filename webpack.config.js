@@ -30,7 +30,7 @@ module.exports = {
       watch: true
     }),
     new HtmlWebpackPlugin({
-      filename: 'index.php',
+      filename: 'index.html',
       template: './src/index.php',
       inject: true
     })
