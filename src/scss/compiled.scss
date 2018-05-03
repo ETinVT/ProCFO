@@ -1,3 +1,7 @@
 @import 'variables/colorPalette.scss';
 @import 'variables/measurements.scss';
 @import 'variables/mixins.scss';
+
+body {
+  background: $main-blue;
+}

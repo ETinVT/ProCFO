@@ -2,16 +2,18 @@ const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
     vendors: [ 'babel-polyfill' ],
     bundle: './src/js/index.js',
+    compiled: path.resolve(__dirname, 'src/scss/compiled.scss')
   },
   output: {
     filename: '[name].[hash].js',
     chunkFilename: '[name].js',
-    path: path.resolve(__dirname, 'build')
+    path: path.resolve(__dirname, 'build'),
   },
   module: {
     rules: [
@@ -20,9 +22,18 @@ module.exports = {
         exclude: /node_modules/,
         loader: "babel-loader"
       },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          use: ['css-loader', 'sass-loader']
+        })
+      }
     ]
   },
   plugins: [
+    new ExtractTextPlugin({
+      filename: 'compiled.css'
+    }),
     new webpack.ProvidePlugin({
       fetch: 'imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch'
     }),
