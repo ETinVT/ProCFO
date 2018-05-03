@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     vendors: [ 'babel-polyfill' ],
-    bundle: './src/js/index.js'
+    bundle: './src/js/index.js',
   },
   output: {
     filename: '[name].[hash].js',
@@ -31,7 +31,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/index.php',
+      template: 'index.php',
       inject: true
     })
   ],
