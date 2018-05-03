@@ -11,7 +11,7 @@ module.exports = {
     compiled: path.resolve(__dirname, 'src/scss/compiled.scss')
   },
   output: {
-    filename: '[name].[hash].js',
+    filename: '[name].js',
     chunkFilename: '[name].js',
     path: path.resolve(__dirname, 'build'),
   },
