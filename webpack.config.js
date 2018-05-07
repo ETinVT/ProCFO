@@ -54,7 +54,7 @@ module.exports = {
       },
       {
         pattern: /<!-- Start Stylesheet -->/,
-        replacement: '<link href="http://cp6.cpasitesolutions.com/~previewm/admin/compiled.css" rel="stylesheet">'
+        replacement: `<link href="http://cp${process.env.CPSERVER}.cpasitesolutions.com/~${process.env.CPUSERNAME}/admin/compiled.css" rel="stylesheet">`
       },
       {
         pattern: /<!-- Start Header -->/,
@@ -63,7 +63,7 @@ module.exports = {
       {
         pattern: /(src="|href=")\/(images|~)/,
         replacement: function(match, protocol, path) {
-          return `${protocol}http://cp6.cpasitesolutions.com/${path}`
+          return `${protocol}http://cp${process.env.CPSERVER}.cpasitesolutions.com/${path}`
         }
       }
     ])
