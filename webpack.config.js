@@ -44,12 +44,20 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.php',
-      inject: true
+      inject: false
     }),
     new HtmlReplacePlugin([
       {
         pattern: /<!-- Start Navbar -->/,
         replacement: 'Nav'
+      },
+      {
+        pattern: /<!-- Start Stylesheet -->/,
+        replacement: '<link href="http://cp6.cpasitesolutions.com/~previewm/admin/compiled.css" rel="stylesheet">'
+      },
+      {
+        pattern: /<!-- Start Header -->/,
+        replacement: '<h2>{company_name}</h2>'
       },
       {
         pattern: /(src="|href=")\/(images|~)/,
