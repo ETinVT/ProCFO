@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlReplacePlugin = require('./webpack-plugins/HtmlReplacePlugin');
 
 module.exports = {
   entry: {
@@ -44,7 +45,13 @@ module.exports = {
       filename: 'index.html',
       template: 'index.php',
       inject: true
-    })
+    }),
+    new HtmlReplacePlugin([
+      {
+        pattern: '<!-- Start Navbar -->',
+        replacement: '<nav></nav>'
+      }
+    ])
   ],
   optimization: {
     runtimeChunk: false,
