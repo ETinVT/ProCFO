@@ -48,8 +48,14 @@ module.exports = {
     }),
     new HtmlReplacePlugin([
       {
-        pattern: '<!-- Start Navbar -->',
-        replacement: '<nav></nav>'
+        pattern: /<!-- Start Navbar -->/,
+        replacement: 'Nav'
+      },
+      {
+        pattern: /(src="|href=")\/(images|~)/,
+        replacement: function(match, protocol, path) {
+          return `${protocol}http://cp6.cpasitesolutions.com/${path}`
+        }
       }
     ])
   ],
