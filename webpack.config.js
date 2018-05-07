@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlReplacePlugin = require('./webpack-plugins/HtmlReplacePlugin');
+require('dotenv').config();
 
 module.exports = {
   entry: {
