@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlReplacePlugin = require('./webpack-plugins/HtmlReplacePlugin');
 require('dotenv').config();
+const smartMenu = require('./webpack-plugins/smart-menu');
+const cssMenu = require('./webpack-plugins/css-menu');
 
 module.exports = {
   entry: {
@@ -50,7 +52,7 @@ module.exports = {
     new HtmlReplacePlugin([
       {
         pattern: /<!-- Start Navbar -->/,
-        replacement: 'Nav'
+        replacement: smartMenu
       },
       {
         pattern: /<!-- Start Stylesheet -->/,
