@@ -52,7 +52,7 @@ module.exports = {
     new HtmlReplacePlugin([
       {
         pattern: /<!-- Start Navbar -->/,
-        replacement: smartMenu
+        replacement: process.env.NAVBAR === 'smart' ? smartMenu : cssMenu
       },
       {
         pattern: /<!-- Start Stylesheet -->/,
