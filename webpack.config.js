@@ -5,8 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlReplacePlugin = require('./webpack-plugins/HtmlReplacePlugin');
 require('dotenv').config();
-const smartMenu = require('./webpack-plugins/smart-menu');
-const cssMenu = require('./webpack-plugins/css-menu');
+const replaceIncludes = require('./webpack-plugins/replace-config/includes');
+const replacePathing = require('./webpack-plugins/replace-config/pathing');
+const replaceTags = require('./webpack-plugins/replace-config/tags');
 
 module.exports = {
   entry: {
@@ -50,88 +51,9 @@ module.exports = {
       inject: false
     }),
     new HtmlReplacePlugin([
-      {
-        pattern: /<!-- Start Navbar -->/,
-        replacement: process.env.NAVBAR === 'smart' ? smartMenu : cssMenu
-      },
-      {
-        pattern: /<!-- Start Stylesheet -->/,
-        replacement: `<link href="http://cp${process.env.CPSERVER}.cpasitesolutions.com/~${process.env.CPUSERNAME}/admin/compiled.css" rel="stylesheet">`
-      },
-      {
-        pattern: /<!-- Start Header -->/,
-        replacement: `<h2>${process.env.COMPANYNAME}</h2>`
-      },
-      {
-        pattern: /{company_name}/,
-        replacement: process.env.COMPANYNAME
-      },
-      {
-        pattern: /{firm_type}/,
-        replacement: process.env.FIRMTYPE
-      },
-      {
-        pattern: /{street_address}/,
-        replacement: process.env.STREETADDRESS
-      },
-      {
-        pattern: /{city}/,
-        replacement: process.env.CITY
-      },
-      {
-        pattern: /{state}/,
-        replacement: process.env.STATE
-      },
-      {
-        pattern: /{zip}/,
-        replacement: process.env.ZIP
-      },
-      {
-        pattern: /{email}/,
-        replacement: process.env.EMAIL
-      },
-      {
-        pattern: /{phone}/,
-        replacement: process.env.PHONE
-      },
-      {
-        pattern: /{fax}/,
-        replacement: process.env.FAX
-      },
-      {
-        pattern: /{domain}/,
-        replacement: process.env.DOMAIN
-      },
-      {
-        pattern: /{page_title}/,
-        replacement: `${process.env.CITY}, ${process.env.STATE} CPA / ${process.env.COMPANYNAME}`
-      },
-      {
-        pattern: /{consult_text}/,
-        replacement: process.env.CONSULTTEXT
-      },
-      {
-        pattern: /{facebook}/,
-        replacement: process.env.FACEBOOK
-      },
-      {
-        pattern: /{googleplus}/,
-        replacement: process.env.GOOGLEPLUS
-      },
-      {
-        pattern: /{linkedin}/,
-        replacement: process.env.LINKEDIN
-      },
-      {
-        pattern: /{twitter}/,
-        replacement: process.env.TWITTER
-      },
-      {
-        pattern: /(src="|href=")\/(images|~)/,
-        replacement: function(match, protocol, path) {
-          return `${protocol}http://cp${process.env.CPSERVER}.cpasitesolutions.com/${path}`
-        }
-      }
+      ...replaceIncludes,
+      ...replaceTags,
+      ...replacePathing
     ])
   ],
   optimization: {
