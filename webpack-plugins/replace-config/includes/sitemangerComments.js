@@ -1,5 +1,8 @@
 const smartMenu = require('../helpers/menu/smart-menu');
 const cssMenu = require('../helpers/menu/css-menu');
+const content = require('../helpers/html/content');
+const hubPictures = require('../helpers/html/hubPictures');
+const hubTabs = require('../helpers/html/hubTabs');
 
 const sitemangerCommentReplacements = [
   {
@@ -14,6 +17,18 @@ const sitemangerCommentReplacements = [
     pattern: /<!-- Start Header -->/,
     replacement: `<h2>${process.env.COMPANYNAME}</h2>`
   },
+  {
+    pattern: /<!-- Start Page -->/,
+    replacement: content
+  },
+  {
+    pattern: /<!-- Start Page Pictures -->/,
+    replacement: hubPictures
+  },
+  {
+    pattern: /<!-- Start Page Tabs -->/,
+    replacement: hubTabs
+  }
 ]
 
 module.exports = sitemangerCommentReplacements
