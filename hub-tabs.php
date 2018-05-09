@@ -102,7 +102,7 @@
 				<div class="container">
 					<div class="row">
 						<div id="content" class="col-md-8 margin-top-30 margin-bottom-60">
-							<!-- Start Page Tabs-->
+							<!-- Start Page Tabs -->
 						</div>
 						<div id="sidebar" class="col-md-4 margin-60 hidden-xs hidden-sm">
 							<div id="subNav">
