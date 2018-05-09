@@ -5,9 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlReplacePlugin = require('./webpack-plugins/HtmlReplacePlugin');
 require('dotenv').config();
-const replaceIncludes = require('./webpack-plugins/replace-config/includes');
-const replacePathing = require('./webpack-plugins/replace-config/pathing');
-const replaceTags = require('./webpack-plugins/replace-config/tags');
+const sitemangerCommentReplacements = require('./webpack-plugins/replace-config/includes/sitemangerComments');
+const pathingReplacement = require('./webpack-plugins/replace-config/includes/pathing');
+const tagReplacements = require('./webpack-plugins/replace-config/includes/tag');
 
 module.exports = {
   entry: {
