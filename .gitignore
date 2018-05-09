@@ -55,7 +55,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+# .env
 
 package-lock.json
 
@@ -71,3 +71,9 @@ dist/*.css
 build/*.css
 dist/**/*.css
 build/**/*.css
+
+#php
+dist/*.php
+build/*.php
+dist/**/*.php
+build/**/*.php
