@@ -55,6 +55,16 @@ module.exports = {
       template: 'internal.php',
       inject: false
     }),
+    new HtmlWebpackPlugin({
+      filename: 'hub-pictures.html',
+      template: 'hub-pictures.php',
+      inject: false
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'hub-tabs.html',
+      template: 'hub-tabs.php',
+      inject: false
+    }),
     new HtmlReplacePlugin([
       ...sitemangerCommentReplacements,
       ...pathingReplacement,
