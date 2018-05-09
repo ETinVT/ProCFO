@@ -6,7 +6,7 @@ const menuData = [
   },
   {
     title: "About",
-    href:"internal.html",
+    href:"hub-pictures.html",
     children: [
       {
         title: "Firm Profile",
@@ -27,11 +27,11 @@ const menuData = [
   },
   {
     title: "Services",
-    href:"internal.html",
+    href:"hub-tabs.html",
     children: [
       {
         title: "Tax Services",
-        href:"internal.html",
+        href:"hub-pictures.html",
         children: [
           {
             title: "Tax Preparation",
@@ -52,7 +52,7 @@ const menuData = [
       },
       {
         title: "Business Services",
-        href:"internal.html",
+        href:"hub-pictures.html",
         children: [
           {
             title: "Small Business Accounting",
@@ -123,7 +123,7 @@ const menuData = [
       },
       {
         title: "Quickbooks Services",
-        href:"internal.html",
+        href:"hub-pictures.html",
         children: [
           {
             title: "Why Quickbooks",
@@ -159,7 +159,7 @@ const menuData = [
       },
       {
         title: "Services for Individuals",
-        href:"internal.html",
+        href:"hub-pictures.html",
         children: [
           {
             title: "Personal Financial Planning",
@@ -180,7 +180,7 @@ const menuData = [
       },
       {
         title: "Industries",
-        href:"internal.html",
+        href:"hub-pictures.html",
         children: [
           {
             title: "Construction",
@@ -223,11 +223,11 @@ const menuData = [
   },
   {
     title: "Client Center",
-    href:"internal.html",
+    href:"hub-tabs.html",
     children: [
       {
         title: "Newsletter",
-        href:"internal.html",
+        href:"hub-pictures.html",
         children: [
           {
             title: "This Month's Newsletter",
@@ -248,7 +248,7 @@ const menuData = [
       },
       {
         title: "Financial Guides",
-        href:"internal.html",
+        href:"hub-pictures.html",
         children: [
           {
             title: "Life Events",
@@ -284,7 +284,7 @@ const menuData = [
       },
       {
         title: "Tax Center",
-        href:"internal.html",
+        href:"hub-pictures.html",
         children: [
           {
             title: "Track Your Refund",
@@ -320,7 +320,7 @@ const menuData = [
       },
       {
         title: "Resources",
-        href:"internal.html",
+        href:"hub-pictures.html",
         children: [
           {
             title: "Financial Calculators",
