@@ -56,9 +56,9 @@ module.exports = {
       inject: false
     }),
     new HtmlReplacePlugin([
-      ...replaceIncludes,
-      ...replaceTags,
-      ...replacePathing
+      ...sitemangerCommentReplacements,
+      ...pathingReplacement,
+      ...tagReplacements
     ])
   ],
   optimization: {

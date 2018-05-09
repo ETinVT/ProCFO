@@ -65,4 +65,4 @@ const tagReplacements = [
   }
 ]
 
-module.exports = tagIncludes
+module.exports = tagReplacements
