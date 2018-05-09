@@ -1,5 +1,5 @@
-const smartMenu = require('../helpers/smart-menu');
-const cssMenu = require('../helpers/css-menu');
+const smartMenu = require('../helpers/menu/smart-menu');
+const cssMenu = require('../helpers/menu/css-menu');
 
 const sitemangerCommentReplacements = [
   {
