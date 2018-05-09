@@ -1,4 +1,4 @@
-const replaceTags = [
+const tagReplacements = [
   {
     pattern: /{company_name}/,
     replacement: process.env.COMPANYNAME
@@ -65,4 +65,4 @@ const replaceTags = [
   }
 ]
 
-module.exports = replaceTags
+module.exports = tagIncludes

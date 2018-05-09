@@ -1,7 +1,7 @@
 const smartMenu = require('../smart-menu');
 const cssMenu = require('../css-menu');
 
-const replaceIncludes = [
+const sitemangerCommentReplacements = [
   {
     pattern: /<!-- Start Navbar -->/,
     replacement: process.env.NAVBAR === 'smart' ? smartMenu : cssMenu
@@ -16,4 +16,4 @@ const replaceIncludes = [
   },
 ]
 
-module.exports = replaceIncludes
+module.exports = sitemangerCommentReplacements

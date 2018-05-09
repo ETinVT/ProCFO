@@ -1,4 +1,4 @@
-const replacePathing = [
+const pathingReplacement = [
   {
     pattern: /(src="|href="|url\()\/(images|~)/,
     replacement: function (match, protocol, path) {
@@ -7,4 +7,4 @@ const replacePathing = [
   },
 ]
 
-module.exports = replacePathing;
+module.exports = pathingReplacement;
