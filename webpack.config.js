@@ -50,6 +50,11 @@ module.exports = {
       template: 'index.php',
       inject: false
     }),
+    new HtmlWebpackPlugin({
+      filename: 'internal.html',
+      template: 'internal.php',
+      inject: false
+    }),
     new HtmlReplacePlugin([
       ...replaceIncludes,
       ...replaceTags,
