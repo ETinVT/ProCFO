@@ -1,7 +1,7 @@
 const menuData = [
   {
     title: "Home",
-    href:"internal.html",
+    href:"index.html",
     children: null
   },
   {
