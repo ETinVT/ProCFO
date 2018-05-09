@@ -48,7 +48,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.php',
-      inject: false
+      inject: true,
+      chunks: [
+        process.env.CSSLOCATION === 'local' ? 'compiled' : null,
+        process.env.JSLOCATION === 'local' ? 'bundle' : null,
+        process.env.JSLOCATION === 'local' ? 'vendor' : null,
+      ]
     }),
     new HtmlWebpackPlugin({
       filename: 'internal.html',

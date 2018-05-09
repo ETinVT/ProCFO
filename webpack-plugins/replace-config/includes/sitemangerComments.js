@@ -11,7 +11,7 @@ const sitemangerCommentReplacements = [
   },
   {
     pattern: /<!-- Start Stylesheet -->/,
-    replacement: `<link href="http://cp${process.env.CPSERVER}.cpasitesolutions.com/~${process.env.CPUSERNAME}/admin/compiled.css" rel="stylesheet">`
+    replacement: process.env.CSSLOCATION === 'local' ? '' : `<link href="http://cp${process.env.CPSERVER}.cpasitesolutions.com/~${process.env.CPUSERNAME}/admin/compiled.css" rel="stylesheet">`
   },
   {
     pattern: /<!-- Start Header -->/,
